@@ -3,32 +3,33 @@ Traveller，翻译为旅行家，是我用来实践最佳web技术的项目，�
 
 相关网址
 -------------------------
-Git：https://github.com/mingziday/Traveller_Spring-Data-Rest_Angularjs
+Git：https://github.com/mingziday/Traveller_Spring-Data-Rest_Angularjs  
 BLog：
 
 技术规划要点
 -------------------------
-1、数据库：Mysql5
-Navicat11（一款可视化操作Mysql的工具）
-2、编辑工具：
-STC（Spring基于Eclipse封装的集成开发工具）
-SubLime（一款非常酷的文本编辑工具）
-3、服务容器Tomcat
-4、后端MVC框架
-控制层：Spring
-模型层：Hibernate Session Factory---->Spring Data JPA
-后端校验：Hibernate JSR303
-5、前端MVC框架Angularjs：2009年出生的前端神器
-6、前端样式框架
-bootstrap
-7、工程管理
-Maven
-webjar： 一种将前端资源文件进行打包整体发布的方法
-8、版本发布工具git
-9、测试框架SpringTest+JUnit
-10、其他
-二级缓存：Memcached、hibernate+coherence
-静态缓存：反向代理nginx+静态缓存varnish+静态化工具（Node.js）
+1、数据库：   
+Mysql5    
+Navicat11(一款可视化操作Mysql的工具)  
+2、编辑工具：   
+STC(Spring基于Eclipse封装的Spring集成开发工具)   
+SubLime(一款非常酷的文本编辑工具)   
+3、服务容器Tomcat   
+4、后端MVC框架   
+控制层：Spring   
+模型层：Hibernate Session Factory---->Spring Data JPA    
+后端校验：Hibernate JSR303   
+5、前端MVC框架Angularjs：2009年出生的前端神器   
+6、前端样式框架   
+bootstrap  
+7、工程管理   
+Maven   
+webjar： 一种将前端资源文件进行打包整体发布的方法   
+8、版本发布工具git   
+9、测试框架SpringTest+JUnit    
+10、其他    
+二级缓存：Memcached、hibernate+coherence     
+静态缓存：反向代理nginx+静态缓存varnish+静态化工具(Node.js)  
 
 更新日志
 -------------------------
