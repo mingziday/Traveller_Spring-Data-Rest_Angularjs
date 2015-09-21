@@ -4,7 +4,7 @@ Traveller，翻译为旅行家，是我用来实践最佳web技术的项目，�
 相关网址
 -------------------------
 Git：https://github.com/mingziday/Traveller_Spring-Data-Rest_Angularjs  
-BLog：
+BLog：http://www.cnblogs.com/mingziday/category/712097.html
 
 技术规划要点
 -------------------------
