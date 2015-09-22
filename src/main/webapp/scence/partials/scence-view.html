@@ -1,0 +1,60 @@
+<!--http://htmlstream.com/preview/unify-v1.8/blog_medium_right_sidebar.html-->
+  <div class="container content-md"> 
+   <div class="row blog-page"> 
+    <!-- Left Sidebar --> 
+    <div class="col-md-9 md-margin-bottom-40"> 
+     <!--Blog Post--> 
+     <div class="row margin-bottom-40"> 
+      <h2> {{scence.name}}</h2> 
+      <ul class="list-unstyled list-inline blog-info"> 
+       <li><i class="fa fa-calendar"></i>{{scence.regdate| date : 'yyyy-MM-dd'}}</li>
+       <li><i class="fa fa-tags"></i> {{scence.address}}</li> 
+       <li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li> 
+      </ul> 
+      <div ng-bind-html="scence.info"></div>
+     </div> 
+     <!--End Blog Post-->
+     <!--留言-->
+      <div class="headline headline-md"> 
+       <h2>留言</h2> 
+      </div> 
+    </div> 
+    <!-- End Left Sidebar --> 
+    <!-- Right Sidebar --> 
+    <div class="col-md-3"> 
+     <!-- Posts --> 
+     <div class="posts margin-bottom-40"> 
+      <div class="headline headline-md"> 
+       <h2>最新评论</h2> 
+      </div> 
+      <dl class="dl-horizontal"> 
+       <dt> 
+        <a href="#"><img src="http://htmlstream.com/preview/unify-v1.8/assets/img/sliders/elastislide/6.jpg" alt="" /></a> 
+       </dt> 
+       <dd> 
+        <p> <a href="#">Responsive Bootstrap 3 Template placerat idelo alac eratamet.</a> </p> 
+       </dd> 
+      </dl> 
+      <dl class="dl-horizontal"> 
+       <dt> 
+        <a href="#"><img src="http://htmlstream.com/preview/unify-v1.8/assets/img/sliders/elastislide/10.jpg" alt="" /></a> 
+       </dt> 
+       <dd> 
+        <p> <a href="#">100+ Amazing Features Layer Slider, Layer Slider, Icons, 60+ Pages etc.</a> </p> 
+       </dd> 
+      </dl> 
+      <dl class="dl-horizontal"> 
+       <dt> 
+        <a href="#"><img src="http://htmlstream.com/preview/unify-v1.8/assets/img/sliders/elastislide/11.jpg" alt="" /></a> 
+       </dt> 
+       <dd> 
+        <p> <a href="#">Developer Friendly Code imperdiet condime ntumi mperdiet condim.</a> </p> 
+       </dd> 
+      </dl> 
+     </div> 
+     <!-- End Posts --> 
+    </div> 
+    <!-- End Right Sidebar --> 
+   </div> 
+   <!--/row--> 
+  </div>

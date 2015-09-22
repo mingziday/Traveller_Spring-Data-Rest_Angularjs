@@ -1,0 +1,47 @@
+ <div class="container">
+   <!--登录框开始--> 
+   <form class="form-horizontal" data-toggle="validator" role="form" action="/traveller/student/login" method="POST"> 
+    <div class="form-group"> 
+     <div class="col-sm-offset-2 col-sm-6"> 
+      <h2 class="form-singnin-heading">欢迎登录</h2> 
+      <span class="help-block with-errors">${errorMsg}</span>
+     </div> 
+    </div> 
+    <div class="form-group has-feedback"> 
+     <label for="nameOrEmail" class="col-sm-2 control-label">昵称</label> 
+     <div class="col-sm-6"> 
+      <span class="glyphicon glyphicon-user form-control-feedback"></span> 
+      <input type="text" class="form-control" name="nameOrEmail" placeholder="请输入用户名/邮箱" required/> 
+     </div>
+	  <span class="help-block with-errors"></span>
+    </div> 
+    <div class="form-group has-feedback"> 
+     <label for="stuPassword" class="col-sm-2 control-label">密&nbsp;&nbsp;&nbsp;&nbsp;码</label> 
+     <div class="col-sm-6"> 
+      <span class="glyphicon glyphicon-lock form-control-feedback"></span> 
+      <input type="password" class="form-control" name="password" placeholder="请输入密码" maxlength="15" required/> 
+     </div>
+	 <span class="help-block with-errors"></span>
+    </div> 
+    <div class="form-group"> 
+     <div class="col-sm-offset-2 col-sm-4"> 
+      <div class="checkbox"> 
+       <label> <input type="checkbox" />七天内自动登陆 </label> 
+      </div> 
+     </div> 
+     <div class="col-sm-2"> 
+      <a href="#">忘记密码?</a> 
+     </div> 
+    </div> 
+    <div class="form-group"> 
+     <div class="col-sm-offset-2 col-sm-3"> 
+      <button type="submit" class="btn btn-primary btn-block "> <span class="glyphicon glyphicon-log-in"></span> &nbsp; 登录 </button> 
+     </div> 
+     <div class="col-sm-3"> 
+      <a class="btn btn-primary btn-block"> <span class="glyphicon glyphicon-registration-mark"></span>&nbsp;注册 </a> 
+     </div> 
+    </div> 
+   </form> 
+   <!--登录框结束--> 
+
+  </div>

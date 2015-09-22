@@ -16,9 +16,11 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 	/*
 	 * save/delete/upadte/findAll自带
 	 */
+	//获取所有
+	List<User> findAll();
 	//获取最新增加的6个
 	List<User> findFirst6ByOrderByRegdateDesc();
 	//获取分页
 	Page<User> findAll(Pageable pageable);
-	
+
 }

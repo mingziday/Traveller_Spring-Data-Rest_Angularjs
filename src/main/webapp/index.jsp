@@ -308,12 +308,13 @@
    <div ng-include="'fragments/footer.html'"></div> 
   </div> 
   <!--end body container--> 
-  <script type="text/javascript" src="webjars/angularjs/1.3.8/angular.min.js"></script> 
-  <script type="text/javascript" src="webjars/angularjs/1.3.8/angular-resource.min.js"></script> 
-  <script type="text/javascript" src="webjars/bootstrap-material-design/0.2.1/js/material.js"></script> 
-  <script type="text/javascript" src="index/js/app.js"></script> 
-  <script type="text/javascript" src="webjars/restangular/1.4.0/restangular.min.js"></script> 
-  <script type="text/javascript" src="common/js/lodash.min.js"></script>  
+<script type="text/javascript" src="webjars/angularjs/1.3.8/angular.min.js"></script>
+<script type="text/javascript" src="common/myjs/services.js"></script>
+<script type="text/javascript" src="webjars/bootstrap-material-design/0.2.1/js/material.js"></script> 
+<script type="text/javascript" src="index/js/app.js"></script> 
+<script type="text/javascript" src="webjars/restangular/1.4.0/restangular.min.js"></script> 
+<script type="text/javascript" src="common/js/lodash.min.js"></script> 
+ 
  </body>
 </html>
 

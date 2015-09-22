@@ -1,0 +1,58 @@
+ <div class="container">
+    <!--注册框开始--> 
+   <form class="form-horizontal" data-toggle="validator"> 
+    <div class="form-group"> 
+     <div class="col-sm-offset-2 col-sm-6"> 
+      <h2 class="form-singnin-heading">欢迎注册</h2> 
+     </div> 
+    </div> 
+    <div class="form-group  has-feedback"> 
+     <label for="stuNetname" class="col-sm-2 control-label">昵称</label> 
+     <div class="col-sm-6"> 
+      <span class="glyphicon glyphicon-user form-control-feedback"></span> 
+      <input type="text" class="form-control" id="stuNetname" placeholder="请输入用户名" pattern="^[A-Za-z0-9]+$" maxlength="16" required/> 
+     </div>
+     <span class="help-block with-errors"></span>
+    </div> 
+    <div class="form-group  has-feedback"> 
+     <label for="stuEmail" class="col-sm-2 control-label">邮箱</label> 
+     <div class="col-sm-6"> 
+      <span class="glyphicon glyphicon-envelope form-control-feedback"></span> 
+      <input type="email" class="form-control" id="stuEmail" placeholder="请输入邮箱" data-error="invalid email address" required/> 
+     </div>
+     <div class="help-block with-errors"></div>
+    </div> 
+    <div class="form-group has-feedback"> 
+     <label for="stuPassword" class="col-sm-2 control-label">密码</label> 
+     <div class="col-sm-6"> 
+      <span class="glyphicon glyphicon-lock form-control-feedback"></span> 
+      <input type="password" class="form-control" id="stuPassword" placeholder="请输入密码" maxlength="15" required/> 
+     </div> 
+      <div class="help-block with-errors"></div>
+    </div>
+    <div class="form-group has-feedback"> 
+     <label for="stuPasswordConfirm" class="col-sm-2 control-label">密码确认</label> 
+     <div class="col-sm-6"> 
+      <span class="glyphicon glyphicon-lock form-control-feedback"></span> 
+      <input type="password" class="form-control" id="stuPasswordConfirm" placeholder="请输入密码"  data-match="#stuPassword" data-match-error="Whoops, these don't match" required/> 
+     </div>
+     <div class="help-block with-errors"></div>
+    </div> 
+    <div class="form-group"> 
+     <div class="col-sm-offset-2 col-sm-6"> 
+      <div class="checkbox"> 
+       <label> <input type="checkbox" />七天内自动登陆 </label> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="form-group"> 
+     <div class="col-sm-offset-2 col-sm-6"> 
+      <button type="submit" class="btn btn-primary btn-block"> 
+      <span class="glyphicon glyphicon-registration-mark"></span>&nbsp;注册 
+      </button> 
+     </div> 
+    </div> 
+   </form> 
+   <!--注册框结束--> 
+  </div>
+  <!--container-->
