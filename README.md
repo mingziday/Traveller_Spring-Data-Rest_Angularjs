@@ -37,8 +37,13 @@ webjar： 一种将前端资源文件进行打包整体发布的方法
 2、安装Eclipse或者SCT  
 3、安装Maven  
 4、Mysql5  
-5、导入数据库  
-6、更改数据库连接字串  
+5、导入数据库，数据脚本sql/traveller.sql  
+6、更改数据库连接字串，com.huawei.traveller.config.AppConfig  
+			ds.setDriverClass("com.mysql.jdbc.Driver");  
+			ds.setJdbcUrl(  
+			"jdbc:mysql://localhost:3306/happycardata?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull");    
+			ds.setUser("root");   
+			ds.setPassword("123456");  
 7、编译运行
 
 
@@ -46,4 +51,4 @@ webjar： 一种将前端资源文件进行打包整体发布的方法
 -------------------------
 首页显示scences列表、user列表----2015/9/22   
 scences主页显示、主页分页、详细页显示------2015/9/22   
-
+首页增加scences的链接----2015/9/24
