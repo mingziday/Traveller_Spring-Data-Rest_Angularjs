@@ -79,7 +79,7 @@
         </div> 
        </div> 
        <div class="overflow-h"> 
-        <h3>{{scence.name}}</h3> 
+        <h3><a ng-href="scence.jsp#/scences/{{scence.id}}/view">{{scence.name}}</a></h3> 
         <div class="star-vote pull-right"> 
          <!--小星星--> 
          <ul class="list-inline"> 
@@ -301,7 +301,7 @@
   </div> 
   <div class="container" ng-controller="UsersController"> 
    <ul class="list-unstyled blog-photos margin-bottom-30"> 
-    <li ng-repeat="user in users | filter:query"> <a href="#"> <img class="hover-effect" alt="" ng-src="http://htmlstream.com/preview/unify-v1.8/assets/img/sliders/elastislide/{{user.picture}}" /></a></li> 
+    <li ng-repeat="user in users | filter:query"> <a ng-href="user.jsp#/users/{{user.id}}/view"> <img class="hover-effect" alt="" ng-src="http://htmlstream.com/preview/unify-v1.8/assets/img/sliders/elastislide/{{user.picture}}" /></a></li> 
    </ul> 
   </div> 
   <div class="container-fluid"> 

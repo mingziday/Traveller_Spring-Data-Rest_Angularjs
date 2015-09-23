@@ -1,9 +1,7 @@
 /**
  * Created by travelfish on 01/06/14.
  */
-
-angular.module('userApp',['ui.router','ngResource']);
-
+angular.module('userApp',['ui.router']);
 angular.module('userApp')
 .config(function($stateProvider,$httpProvider){
     $stateProvider.state('Users',{
@@ -18,6 +16,10 @@ angular.module('userApp')
         url:'/users/register',
         templateUrl:'user/partials/register.html',
       //  controller:'userCreateController'
+    }).state('viewScence',{
+       url:'/users/:id/view',
+       templateUrl:'users/partials/user-view.html',
+       controller:'userViewController'
     });
 
 })

@@ -7,9 +7,12 @@ angular.module('travellerApp.services',['restangular'])
 	 RestangularProvider.setBaseUrl('./');
 	 RestangularProvider.addResponseInterceptor(function(data, operation, route) {
         var returnData;
+        if (route.indexOf("/") > 0)
+        {
+            route = route.substring(0,route.indexOf("/"));
+        }
         if (operation === 'getList' && data._embedded) {
-            returnData = data._embedded[route];
-
+             returnData = data._embedded[route];
              angular.forEach(returnData, function(item){
                 var href = item._links.self.href;
                 item.id = href.substring(href.lastIndexOf("/")+1);
