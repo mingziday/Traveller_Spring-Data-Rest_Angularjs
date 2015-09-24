@@ -16,7 +16,7 @@
        <li> <a href="scence.jsp#/scences"><span class="glyphicon glyphicon-th-large"></span>&nbsp;美景<span class="sr-only">(current)</span></a> </li> 
        <li><a href="#"><span class="glyphicon glyphicon-record">攻略</span></a></li>
 	   <li><a href="user.jsp"><span class="glyphicon glyphicon-record">组团</span></a></li> 
-       <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;旅行者</a></li> 
+       <li><a href="user.jsp#/users"><span class="glyphicon glyphicon-user"></span>&nbsp;旅行者</a></li> 
        <li><a href="#"><span class="glyphicon glyphicon-tags"></span>&nbsp;社区</a></li> 
        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">旅行资源<span class="caret"></span></a> 
         <ul class="dropdown-menu"> 

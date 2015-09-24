@@ -14,12 +14,15 @@
 </div>
 
 <script type="text/javascript" src="webjars/angularjs/1.3.8/angular.js"></script>
-<script type="text/javascript" src="common/js/angular-spring-data-rest.min.js"></script>
 <script type="text/javascript" src="common/js/lodash.min.js"></script>
+<script type="text/javascript" src="common/myjs/services.js"></script>
+<script type="text/javascript" src="user/js/app.js"></script>
+<script type="text/javascript" src="user/js/controllers.js"></script>
 <script type="text/javascript" src="user/js/app.js"></script>
 <script type="text/javascript" src="webjars/angularjs/1.3.8/angular-resource.min.js"></script>
 <script type="text/javascript" src="webjars/restangular/1.4.0/restangular.min.js"></script>
-<script type="text/javascript" src="webjars/angular-ui-router/0.2.15/angular-ui-router.min.js"></script> 
+<script type="text/javascript" src="webjars/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="webjars/angular-sanitize/1.3.11/angular-sanitize.min.js"></script> 
 
 
 </body>

@@ -1,24 +1,25 @@
 /**
  * Created by travelfish on 01/06/14.
  */
-angular.module('userApp',['ui.router']);
+angular.module('userApp',['ui.router','userApp.controllers']);
+
 angular.module('userApp')
 .config(function($stateProvider,$httpProvider){
     $stateProvider.state('Users',{
         url:'/users',
         templateUrl:'user/partials/users.html',
-       // controller:'userListController'
+        controller:'userListController'
     }).state('login',{
        url:'/users/login',
        templateUrl:'user/partials/login.html',
-      // controller:'userViewController'
+       //controller:'userLoginController'
     }).state('register',{
         url:'/users/register',
         templateUrl:'user/partials/register.html',
       //  controller:'userCreateController'
-    }).state('viewScence',{
+    }).state('viewUser',{
        url:'/users/:id/view',
-       templateUrl:'users/partials/user-view.html',
+       templateUrl:'user/partials/user-view.html',
        controller:'userViewController'
     });
 

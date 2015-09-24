@@ -1,27 +1,22 @@
 <div class="container content-md">
-    <div class="row">
-                        
-    </div>                            
-
-
-  <nav> 
-  <div class="text-center">
-  <ul class="pagination pagination-lg">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li class="active" ><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+<div class="row">
+    <table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in users">
+            <td>{{user.id}}</td>
+            <td><a ng-href="user.jsp?#/users/{{user.id}}/view">{{user.name}}</a></td>
+            <td><img class="hover-effect" alt="" ng-src="common/userimg/{{user.picture}}" /></td>
+            <td>{{user.email}}</td>
+        </tr>
+    </tbody>
+</table>                
+</div>                            
 </div>

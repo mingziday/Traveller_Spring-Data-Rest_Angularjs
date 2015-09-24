@@ -301,7 +301,7 @@
   </div> 
   <div class="container" ng-controller="UsersController"> 
    <ul class="list-unstyled blog-photos margin-bottom-30"> 
-    <li ng-repeat="user in users | filter:query"> <a ng-href="user.jsp#/users/{{user.id}}/view"> <img class="hover-effect" alt="" ng-src="http://htmlstream.com/preview/unify-v1.8/assets/img/sliders/elastislide/{{user.picture}}" /></a></li> 
+    <li ng-repeat="user in users | filter:query"> <a ng-href="user.jsp#/users/{{user.id}}/view"> <img class="hover-effect" alt="" ng-src="common/userimg/{{user.picture}}" /></a></li> 
    </ul> 
   </div> 
   <div class="container-fluid"> 
