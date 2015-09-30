@@ -13,11 +13,13 @@ angular.module('travellerApp.services',['restangular'])
         }
         if (operation === 'getList' && data._embedded) {
              returnData = data._embedded[route];
+             
+             /*不再需要重新设置id
              angular.forEach(returnData, function(item){
                 var href = item._links.self.href;
                 item.id = href.substring(href.lastIndexOf("/")+1);
-                //console.log(item.id);
              });
+            */
 
             if (!returnData) {
                 returnData = data._embedded[Object.keys(data._embedded)[0]];
@@ -50,10 +52,15 @@ angular.module('travellerApp.services',['restangular'])
     //获取单个
 	this.fetchOne = function(id){
 	  return Restangular.one(baseurl,id).get();
-	}
+	};
     //获取所有
     this.fetchAll = function(){
       return Restangular.all(baseurl).getList();
+    };
+    //新建对象
+    this.saveOne = function(item){
+      //console.log(item);
+      return Restangular.all(baseurl).post(item);
     }
     
 })

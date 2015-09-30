@@ -29,13 +29,14 @@ public class User extends AbstractEntity {
 
 	private String name;
 
-	private String nickname;
-
 	private String password;
 
 	private String phone;
 
 	private String picture;
+	/*长度=2表示两位2进制数，如果为1只能是bit*/
+	@Column(name = "gender", columnDefinition = "BYTE", length = 2)
+	private byte gender;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date regdate;
@@ -92,14 +93,6 @@ public class User extends AbstractEntity {
 		this.name = name;
 	}
 
-	public String getNickname() {
-		return this.nickname;
-	}
-
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
-	}
-
 	public String getPassword() {
 		return this.password;
 	}
@@ -130,6 +123,14 @@ public class User extends AbstractEntity {
 
 	public void setRegdate(Date regdate) {
 		this.regdate = regdate;
+	}
+
+	public byte getGender()
+	{
+		return this.gender;
+	}
+	public void setGender(byte gender){
+		this.gender = gender;
 	}
 
 }

@@ -1,25 +1,41 @@
  <div class="container">
  <div class="row">
  <div class="col-md-4">
+  <img class="hover-effect" alt="" src="common/userimg/1.jpg" />
  </div>
  <div class="col-md-8">
     <!--注册框开始-->   
-  <form action="#" id="sky-form4" class="sky-form" novalidate="novalidate">
-      <header>Registration form</header>
-      
-      <fieldset>                  
+  <form id="sky-form4" name="userForm" class="sky-form" novalidate="novalidate" ng-submit="newUser()">
+      <header>欢迎注册</header>
+      <fieldset>
+          <section>
+             <div class="alert alert-danger fade in" ng-show="userForm.name.$invalid && userForm.name.$dirty">
+                <div ng-show="userForm.name.$error.required">
+                Please input a name</div>
+                <div ng-show="userForm.name.$error.minlength">username smaller than 5</div>
+                <div ng-show="userForm.name.$error.maxlength">
+                username bigger than 20</div>
+              </div>
+             <div class="alert alert-danger fade in" ng-show="userForm.email.$invalid && userForm.email.$dirty">
+              <div ng-show="userForm.email.$error.required">Please input email</div>
+              <div ng-show="userForm.email.$error.email">email format error</div>
+             </div>
+             <div class="alert alert-danger fade in" ng-show="userForm.password.$invalid && userForm.password.$dirty"> 
+               <div ng-show="userForm.password.$error.required">Please input a pwd</div>
+             </div>
+          </section>                
           <section>
               <label class="input">
                   <i class="icon-append fa fa-user"></i>
-                  <input type="text" name="username" placeholder="Username">
-                  <b class="tooltip tooltip-bottom-right">Needed to enter the website</b>
+                  <input type="text" ng-model="user.name" name="name" placeholder="Username" required ng-maxlength="20" ng-minlength="5">
+                  <b class="tooltip tooltip-bottom-right">Needed to enter name</b>
               </label>
           </section>
           
           <section>
               <label class="input">
                   <i class="icon-append fa fa-envelope"></i>
-                  <input type="email" name="email" placeholder="Email address">
+                  <input type="email" name="email" ng-model="user.email" placeholder="Email address" required>
                   <b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
               </label>
           </section>
@@ -27,7 +43,7 @@
           <section>
               <label class="input">
                   <i class="icon-append fa fa-lock"></i>
-                  <input type="password" name="password" placeholder="Password" id="password">
+                  <input type="password" name="password" ng-model="user.password" placeholder="Password" id="password" required>
                   <b class="tooltip tooltip-bottom-right">Don't forget your password</b>
               </label>
           </section>
@@ -35,13 +51,14 @@
           <section>
               <label class="input">
                   <i class="icon-append fa fa-lock"></i>
-                  <input type="password" name="passwordConfirm" placeholder="Confirm password">
+                  <input type="password" name="passwordConfirm" placeholder="Confirm password" required>
                   <b class="tooltip tooltip-bottom-right">Don't forget your password</b>
               </label>
           </section>
       </fieldset>
           
       <fieldset>
+      <!--
           <div class="row">
               <section class="col col-6">
                   <label class="input">
@@ -54,10 +71,10 @@
                   </label>
               </section>
           </div>
-          
+      -->
           <section>
               <label class="select">
-                  <select name="gender">
+                  <select name="gender" ng-model="user.gender">
                       <option value="0" selected="" disabled="">Gender</option>
                       <option value="1">Male</option>
                       <option value="2">Female</option>
@@ -68,12 +85,14 @@
           </section>
           
           <section>
-              <label class="checkbox"><input type="checkbox" name="subscription" id="subscription"><i></i>I want to receive news and  special offers</label>
-              <label class="checkbox"><input type="checkbox" name="terms" id="terms"><i></i>I agree with the Terms and Conditions</label>
+              <label class="checkbox">
+              <input type="checkbox" name="subscription" id="subscription"><i></i>I want to receive news and  special offers</label>
+              <label class="checkbox">
+              <input type="checkbox" name="terms" id="terms"><i></i>I agree with the Terms and Conditions</label>
           </section>
       </fieldset>
       <footer>
-          <button type="submit" class="btn-u">Submit</button>
+          <button type="submit" class="btn-u" ng-disabled="userForm.$invalid">Submit</button>
       </footer>
   </form>         
 

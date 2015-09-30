@@ -54,11 +54,25 @@ angular.module('userApp.controllers',['travellerApp.services','ngSanitize'])
     //$scope.user = userService.get({id:$stateParams.id});
 
 })
-.controller('userCreateController',function($scope,$stateParams){
+.controller('userRegistController',function($scope,travellerService,$stateParams){
     //console.log($rootScope.user.name);
-    //$scope.user = userService.get({id:$stateParams.id});
+    travellerService.setBaseUrl("users");
+    /*使用angularjs的双向绑定功能自动获取*/
+    $scope.user = {};
+    $scope.newUser = function(){
+        travellerService.saveOne($scope.user).then(
+            function(data) {
+            console.log("ok");//成功
+            //$scope.user = data;
+            },
+            function(data) {
+            console.log("error");//失败
+            //$scope.user = data;
+            }
+     );
+    };//结束function
 
-});
+});//结束controller
 
 /*
  angular.forEach($scope.users, function (item){
@@ -66,4 +80,6 @@ angular.module('userApp.controllers',['travellerApp.services','ngSanitize'])
         });
 
  console.log(reports.length);
+
+ debugger;
 */

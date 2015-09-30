@@ -11,6 +11,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.*;
 import org.springframework.orm.jpa.vendor.*;
 import org.springframework.stereotype.Controller;
+
+import com.huawei.traveller.domain.Scence;
+import com.huawei.traveller.domain.User;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 @Configuration
@@ -28,6 +31,11 @@ public class AppConfig extends RepositoryRestMvcConfiguration {
 		RepositoryRestConfiguration config = super.config();
 		//config.setBaseUri("/traveller");
 		config.setDefaultPageSize(6);/*设置默认页大小*/
+		//设置返回的json Body中显示id
+		config.exposeIdsFor(Scence.class);
+		config.exposeIdsFor(User.class);
+		//设置创建成果后返回创建成果的结果,实际上我们不需要这样
+		//config.setReturnBodyOnCreate(true);
 		return config;
 	}
 

@@ -16,7 +16,7 @@ angular.module('userApp')
     }).state('register',{
         url:'/users/register',
         templateUrl:'user/partials/register.html',
-      //  controller:'userCreateController'
+        controller:'userRegistController'
     }).state('viewUser',{
        url:'/users/:id/view',
        templateUrl:'user/partials/user-view.html',
