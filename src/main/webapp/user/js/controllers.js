@@ -49,31 +49,32 @@ angular.module('userApp.controllers',['travellerApp.services','ngSanitize'])
         //$scope.user.info = $sce.trustAsHtml(data.info);
      });
 })
-.controller('userEditController',function($scope,$stateParams){
+.controller('userEditController',function($scope,$stateParams,$state){
     //console.log($rootScope.user.name);
     //$scope.user = userService.get({id:$stateParams.id});
 
 })
-.controller('userRegistController',function($scope,travellerService,$stateParams){
-    //console.log($rootScope.user.name);
+.controller('userRegistController',function($scope,travellerService,$state){
     travellerService.setBaseUrl("users");
-    /*Ê¹ÓÃangularjsµÄË«Ïò°ó¶¨¹¦ÄÜ×Ô¶¯»ñÈ¡*/
+    /*ä½¿ç”¨angularjsçš„åŒå‘ç»‘å®šåŠŸèƒ½è‡ªåŠ¨è·å–*/
     $scope.user = {};
+    $scope.resultError = false;
     $scope.newUser = function(){
         travellerService.saveOne($scope.user).then(
             function(data) {
-            console.log("ok");//³É¹¦
-            //$scope.user = data;
+                console.log("regist success");//æˆåŠŸï¼Œè·¯ç”±åˆ°resé¡µé¢
+                $state.go('regSuccess');
             },
-            function(data) {
-            console.log("error");//Ê§°Ü
-            //$scope.user = data;
+            function(rsponse) {
+                $scope.resultError = true;
+                $scope.resultErrorMsg="Error with status code"+response.status;//å¤±è´¥ï¼Œæ˜¾ç¤ºå¤±è´¥ä¿¡æ¯
             }
      );
-    };//½áÊøfunction
+    };//ç»“æŸfunction
 
-});//½áÊøcontroller
-
+})//ç»“æŸcontroller
+.controller('userRegSuccessController',function($scope,travellerService,$state){
+});
 /*
  angular.forEach($scope.users, function (item){
             console.log(item.name);

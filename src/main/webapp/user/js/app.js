@@ -21,6 +21,10 @@ angular.module('userApp')
        url:'/users/:id/view',
        templateUrl:'user/partials/user-view.html',
        controller:'userViewController'
+    }).state('regSuccess',{
+      url:'/user/regSuccess',
+      templateUrl:'user/partials/regsuccess.html',
+      controller:'userRegSuccessController'
     });
 
 })

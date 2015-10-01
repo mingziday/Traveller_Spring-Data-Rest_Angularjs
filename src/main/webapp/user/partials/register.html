@@ -9,7 +9,12 @@
       <header>欢迎注册</header>
       <fieldset>
           <section>
-             <div class="alert alert-danger fade in" ng-show="userForm.name.$invalid && userForm.name.$dirty">
+          <!--注册结果-->
+          <div class="alert alert-danger fade in" ng-show="resultError">
+            {{resultErrorMessage}}
+          </div>
+             <div class="alert alert-danger fade in" 
+                  ng-show="userForm.name.$invalid && userForm.name.$dirty">
                 <div ng-show="userForm.name.$error.required">
                 Please input a name</div>
                 <div ng-show="userForm.name.$error.minlength">username smaller than 5</div>

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2015-09-24 01:38:29
+Date: 2015-10-01 22:37:08
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -148,11 +148,11 @@ COMMIT;
 DROP TABLE IF EXISTS `v_users`;
 CREATE TABLE `v_users` (
 `id`  int(11) NOT NULL AUTO_INCREMENT ,
-`nickname`  varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '0' ,
 `name`  varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL ,
+`gender`  tinyint(2) NOT NULL DEFAULT 0 ,
 `email`  varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
 `phone`  varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL ,
-`picture`  varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL ,
+`picture`  varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '1.jpg' ,
 `password`  varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
 `birthdate`  date NULL DEFAULT NULL ,
 `enabled`  bit(1) NULL DEFAULT NULL ,
@@ -163,7 +163,7 @@ PRIMARY KEY (`id`)
 )
 ENGINE=InnoDB
 DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
-AUTO_INCREMENT=13
+AUTO_INCREMENT=31
 
 ;
 
@@ -171,7 +171,7 @@ AUTO_INCREMENT=13
 -- Records of v_users
 -- ----------------------------
 BEGIN;
-INSERT INTO `v_users` VALUES ('1', 'Steve', 'JOBS', 'stive.jobs@apple.com', '0033 1 23 45 67 89', '1.jpg', 'steve', null, '', null, '0', null), ('2', 'Bill', 'GATES', 'bill.gates@microsoft.com', '0033 1 23 45 67 89', '2.jpg', 'bill', null, '', null, '0', null), ('3', 'Mark', 'ZUCKERBERG', 'mark.zuckerberg@facebook.com', '0033 1 23 45 67 89', '3.jpg', 'zuckerberg', null, '', null, '0', null), ('4', 'Tim', 'COOK', 'tim.cook@apple.com', '0033 1 23 45 67 89', '4.jpg', 'cook', null, '', null, '0', null), ('5', 'Larry', 'Page', 'larry.page@gmail.com', '0033 1 23 45 67 89', '5.jpg', 'page', null, '', null, '0', null), ('6', 'Sergey', 'Brin', 'sergey.brin@gmail.com', '0033 1 23 45 67 89', '6.jpg', 'brin', null, '', null, '0', null), ('7', 'Larry', 'ELLISON', 'larry.ellison@oracle.com', '0033 1 23 45 67 89', '7.jpg', 'ellison', null, '', null, '0', null), ('8', 'Jeff', 'BEZOS', 'jeff.bezos@amazon.com', '0033 1 23 45 67 89', '8.jpg', 'bezos', null, '', null, '0', null), ('9', 'Paul', 'ALLEN', 'paul.allen@microsoft.com', '0033 1 23 45 67 89', '9.jpg', 'allen', null, '', null, '0', null), ('10', 'Steve', 'BALLMER', 'steve.ballmer@microsoft.com', '0033 1 23 45 67 89', '10.jpg', 'ballmer', null, '', null, '0', null), ('11', 'Jack', 'DORSEY', 'jack.dorsey@twitter.com', '0033 1 23 45 67 89', '11.jpg', 'dorsey', null, '', null, '0', null), ('12', 'Matt', 'MULLENWEG', 'matt.mullenweg@wordpress.com', '0033 1 23 45 67 89', '12.jpg', 'mullenweg', null, '', null, '0', null);
+INSERT INTO `v_users` VALUES ('1', 'JOBS', '0', 'stive.jobs@apple.com', '0033 1 23 45 67 89', '1.jpg', 'steve', '2015-09-16', '', null, '0', '2015-09-25 10:54:01.000000'), ('2', 'GATES', '0', 'bill.gates@microsoft.com', '0033 1 23 45 67 89', '2.jpg', 'bill', null, '', null, '0', null), ('3', 'ZUCKERBERG', '0', 'mark.zuckerberg@facebook.com', '0033 1 23 45 67 89', '3.jpg', 'zuckerberg', null, '', null, '0', null), ('4', 'COOK', '0', 'tim.cook@apple.com', '0033 1 23 45 67 89', '4.jpg', 'cook', null, '', null, '0', null), ('5', 'Page', '0', 'larry.page@gmail.com', '0033 1 23 45 67 89', '5.jpg', 'page', null, '', null, '0', null), ('6', 'Brin', '0', 'sergey.brin@gmail.com', '0033 1 23 45 67 89', '6.jpg', 'brin', null, '', null, '0', null), ('7', 'ELLISON', '0', 'larry.ellison@oracle.com', '0033 1 23 45 67 89', '7.jpg', 'ellison', null, '', null, '0', null), ('8', 'BEZOS', '0', 'jeff.bezos@amazon.com', '0033 1 23 45 67 89', '8.jpg', 'bezos', null, '', null, '0', null), ('9', 'ALLEN', '0', 'paul.allen@microsoft.com', '0033 1 23 45 67 89', '9.jpg', 'allen', null, '', null, '0', null), ('10', 'BALLMER', '0', 'steve.ballmer@microsoft.com', '0033 1 23 45 67 89', '10.jpg', 'ballmer', null, '', null, '0', null), ('11', 'DORSEY', '0', 'jack.dorsey@twitter.com', '0033 1 23 45 67 89', '11.jpg', 'dorsey', null, '', null, '0', null), ('12', 'MULLENWEG', '0', 'matt.mullenweg@wordpress.com', '0033 1 23 45 67 89', '12.jpg', 'mullenweg', null, '', null, '0', null), ('17', '6', '1', 'mingziday@124.com', null, null, '6', null, '\0', null, '0', null), ('18', '6666', '1', 'ming@126.com', null, null, 'hhhhh', null, '\0', null, '0', null), ('19', 'myname', '1', 'mingziday@126.com', null, null, 'daianna', null, '\0', null, '0', null), ('20', 'myname', '1', 'mingziday@126.com', null, null, 'daianna', null, '\0', null, '0', null), ('21', 'myname55', '2', 'mingziday@126.com', null, null, 'daianna', null, '\0', null, '0', null), ('22', 'myname55', '2', 'mingziday@126.com', null, null, 'daianna', null, '\0', null, '0', null), ('23', 'myname55', '2', 'mingziday@126.com', null, null, 'daianna', null, '\0', null, '0', null), ('24', 'myname55', '2', 'mingziday@126.com', null, null, 'daianna', null, '\0', null, '0', null), ('25', 'myname55', '2', 'mingziday@126.com', null, null, 'daianna', null, '\0', null, '0', null), ('26', '55555', '0', '5fa@124.com', null, null, 'dddddddd', null, '\0', null, '0', null), ('27', 'wosf未付完费', '1', 'sfeojf@126.com', null, null, 'daianna', null, '\0', null, '0', null), ('28', 'wosf未付完费', '1', 'sfeojf@126.com', null, null, 'daianna', null, '\0', null, '0', null), ('29', 'wosf未付完费', '1', 'sfeojf@126.com', null, null, 'daianna', null, '\0', null, '0', null), ('30', 'huawei123', '1', 'minggg@126.com', null, null, 'paspas', null, '\0', null, '0', null);
 COMMIT;
 
 -- ----------------------------
@@ -202,4 +202,4 @@ ALTER TABLE `v_scences` AUTO_INCREMENT=18;
 -- ----------------------------
 -- Auto increment value for v_users
 -- ----------------------------
-ALTER TABLE `v_users` AUTO_INCREMENT=13;
+ALTER TABLE `v_users` AUTO_INCREMENT=31;
