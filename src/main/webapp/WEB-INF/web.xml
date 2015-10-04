@@ -7,24 +7,9 @@
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
-	<!-- log4j监听，放在org.springframework.web.context.ContextLoaderListener前面， 
-		否则启动tomcat时会提示一下错误 :
-		log4j:WARN No appenders could be found for logger(org.springframework.web.context.ContextLoader). 
-		log4j:WARN Please initialize the log4j systemproperly. 
-	-->
 	<listener>
 		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
 	</listener>
-<!--
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener>
--->
-	<!-- 防止spring内存溢出监听器 -->
-	<!-- 
-	<listener> <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class> 
-		</listener> 
-	-->
 	<!-- openSessionInView配置 解决service层延迟加载引起的问题，过滤.action结尾的文件-->
 	<filter> 
 		<filter-name>openSessionInViewFilter</filter-name> 
@@ -47,20 +32,4 @@
 		<param-name>log4jRefreshInterval</param-name>
 		<param-value>600000</param-value>
 	</context-param>
-	
-	<!-- MVC的配置：Processes application requests 
-	<servlet>
-		<servlet-name>traveller</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:servlet-context.xml</param-value>
-		</init-param>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>traveller</servlet-name>
-		<url-pattern>/</url-pattern>
-	</servlet-mapping>
-	-->
 </web-app>

@@ -1,11 +1,5 @@
 package com.huawei.traveller.service;
 
-import java.io.Serializable;
-import java.util.List;
-
-import com.huawei.traveller.common.Page;
-import com.huawei.traveller.domain.User;
-
 public interface UserService{
 
 	/*

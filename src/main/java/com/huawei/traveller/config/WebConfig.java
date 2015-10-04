@@ -10,6 +10,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @ComponentScan(basePackages = "com.huawei.traveller.web.controller")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
+  /*解析jsp页面*/
   @Bean
   public InternalResourceViewResolver getInternalResourceViewResolver() {
     InternalResourceViewResolver resolver = new InternalResourceViewResolver();
@@ -37,6 +38,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     return interceptor;
   }
 
+  /*资源路由配置*/
   @Override
   public void addResourceHandlers(ResourceHandlerRegistry registry) {
     registry.addResourceHandler("/libs/**").addResourceLocations("/libs/");

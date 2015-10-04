@@ -10,7 +10,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "v_users" , catalog = "happycardata")
-//@NamedQuery(name="User.findAll", query="SELECT v FROM VUser v")
+@NamedQuery(name="User.findAll", query="SELECT v FROM User v")
 public class User extends AbstractEntity {
 	@Temporal(TemporalType.DATE)
 	private Date birthdate;

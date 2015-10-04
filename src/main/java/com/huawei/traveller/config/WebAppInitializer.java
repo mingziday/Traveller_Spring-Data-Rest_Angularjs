@@ -18,7 +18,7 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
   //配置root上下文context,如Jpa数据源等的配置
   @Override
   protected Class<?>[] getRootConfigClasses() {
-    return new Class<?>[] { AppConfig.class };
+    return new Class<?>[] { AppConfig.class,CacheConfig.class };
   }
   
   //配置dispatcher servlet
@@ -32,6 +32,7 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
   protected String[] getServletMappings() {
     return new String[] { "/" };
   }
+  
   //配置servlet过滤器
   @Override
   protected Filter[] getServletFilters() {

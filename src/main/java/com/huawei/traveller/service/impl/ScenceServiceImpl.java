@@ -1,18 +1,12 @@
 package com.huawei.traveller.service.impl;
 
-import java.io.Serializable;
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.huawei.traveller.common.Page;
-import com.huawei.traveller.dao.ScenceRepository;
-import com.huawei.traveller.domain.Scence;
 import com.huawei.traveller.service.ScenceService;
 
 @Service("scenceServiceBean")
 public class ScenceServiceImpl implements ScenceService {
+/*
 	@Autowired
 	public ScenceRepository scenceRepository;
 
@@ -44,6 +38,5 @@ public class ScenceServiceImpl implements ScenceService {
 		return false;
 	}
 
-	
-
+*/
 }
