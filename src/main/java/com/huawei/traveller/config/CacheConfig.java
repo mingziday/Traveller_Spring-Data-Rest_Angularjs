@@ -15,7 +15,9 @@ import org.springframework.cache.interceptor.SimpleKeyGenerator;
 import org.springframework.cache.support.SimpleCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.cache.ehcache.EhCacheCacheManager;
+import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
 /**
  * @author Administrator
  * 需要重定义哪些属性，请搜索CachingConfigurer的定义
@@ -37,7 +39,20 @@ public class CacheConfig implements CachingConfigurer {
 
 		return cacheManager;
 	}
-
+//	@Bean
+//	public EhCacheManagerFactoryBean ehCacheManagerFactoryBean() {
+//		EhCacheManagerFactoryBean ehCacheManagerFactoryBean = new EhCacheManagerFactoryBean();
+//		ehCacheManagerFactoryBean.setConfigLocation(new ClassPathResource(
+//				"config/ehcache.xml"));
+//		return ehCacheManagerFactoryBean;
+//	}
+//
+//	@Bean
+//	public CacheManager cacheManager() {
+//		EhCacheCacheManager cacheManager = new EhCacheCacheManager();
+//		cacheManager.setCacheManager(ehCacheManagerFactoryBean().getObject());
+//		return cacheManager;
+//	}
 	@Bean
 	@Override
 	public KeyGenerator keyGenerator() {

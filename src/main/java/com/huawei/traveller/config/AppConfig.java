@@ -111,7 +111,13 @@ public class AppConfig extends RepositoryRestMvcConfiguration {
 		transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
 		return transactionManager;
 	}
-
-
-
+	/*采用Hibernate的TransactionManger？
+	@Bean(name = "transactionManager")
+	public HibernateTransactionManager hibernateTransactionManager() {
+		HibernateTransactionManager hibernateTransactionManager = new HibernateTransactionManager();
+		hibernateTransactionManager.setSessionFactory(localSessionFactoryBean()
+				.getObject());
+		return hibernateTransactionManager;
+	}
+	*/
 }
