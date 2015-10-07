@@ -15,10 +15,11 @@ Navicat11：一款可视化操作Mysql的工具
 STS：Spring基于Eclipse封装的Spring集成开发工具   
 SubLime：一款非常酷的文本编辑工具   
 3、服务容器Tomcat   
-4、后端MVC框架   
-控制层：Spring   
-模型层：Hibernate/Spring Data JPA    
-后端校验：Hibernate JSR303   
+4、后端框架   
+MVC：Spring MVC    
+持久层：Hibernate/Spring Data JPA    
+后端校验：Hibernate JSR303  
+安全：Spring Security   
 5、前端MVC框架   
 Angularjs：2009年出生的前端神器   
 6、前端样式框架   
@@ -28,9 +29,11 @@ Maven
 webjar： 一种将前端资源文件进行打包整体发布的方法   
 8、版本发布工具git   
 9、测试框架SpringTest+JUnit    
-10、其他    
-二级缓存：Memcached、hibernate+coherence     
-静态缓存：反向代理nginx+静态缓存varnish+静态化工具Node.js  
+10、缓存   
+spring cache/spring ehcache
+11、其他    
+Memcached、hibernate+coherence     
+反向代理nginx+静态缓存varnish+静态化工具Node.js  
 
 安装手册
 ------------------------
@@ -45,7 +48,7 @@ webjar： 一种将前端资源文件进行打包整体发布的方法
 			"jdbc:mysql://localhost:3306/happycardata?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull");    
 			ds.setUser("root");   
 			ds.setPassword("123456");  
-7、编译运行  
+7、编译运行发布到tomcat容器  
 8、访问    
 http://localhost:8080/traveller/index.jsp
 
