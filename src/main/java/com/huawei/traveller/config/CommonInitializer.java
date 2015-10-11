@@ -34,12 +34,18 @@ public class CommonInitializer implements WebApplicationInitializer{
 		servletContext.addListener(Log4jConfigListener.class);
 
 		//OpenSessionInViewFilter
+		//针对JPA版本，需要的是OpenEntityManagerInViewFilter
 		//openSessionInView配置 解决service层延迟加载引起的问题，过滤/结尾的文件
 		OpenSessionInViewFilter hibernateSessionInViewFilter = new OpenSessionInViewFilter();
 		FilterRegistration.Dynamic filterRegistration = servletContext.addFilter(
 				"hibernateFilter", hibernateSessionInViewFilter);
 		filterRegistration.addMappingForUrlPatterns(
 				EnumSet.of(DispatcherType.REQUEST, DispatcherType.FORWARD, DispatcherType.INCLUDE), false, "/");
+		
+		/*Ehcache页面缓存过滤器*/
+		FilterRegistration.Dynamic cacheFilterilterRegistration = servletContext.addFilter(
+				"webPageCacheFilter", net.sf.ehcache.constructs.web.filter.SimplePageCachingFilter.class);
+		cacheFilterilterRegistration.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), false, "/index.*");
 		
 		/*DemoServlet
 		DemoServlet demoServlet = new DemoServlet();

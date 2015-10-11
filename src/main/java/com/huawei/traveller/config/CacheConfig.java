@@ -3,16 +3,13 @@
  */
 package com.huawei.traveller.config;
 
-import java.util.Arrays;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachingConfigurer;
 import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.cache.concurrent.ConcurrentMapCache;
 import org.springframework.cache.interceptor.CacheErrorHandler;
 import org.springframework.cache.interceptor.CacheResolver;
 import org.springframework.cache.interceptor.KeyGenerator;
 import org.springframework.cache.interceptor.SimpleKeyGenerator;
-import org.springframework.cache.support.SimpleCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
@@ -25,34 +22,35 @@ import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
 @Configuration
 @EnableCaching
 public class CacheConfig implements CachingConfigurer {
+	/*开箱即用的Spring Cache*/
+	/*
 	@Bean
 	@Override
 	public CacheManager cacheManager() {
 		SimpleCacheManager cacheManager = new SimpleCacheManager();
-
-		//List<Cache> caches = new ArrayList<Cache>();
-		//caches.add(new ConcurrentMapCache("myCacheName"));
-		//cacheManager.setCaches(caches);
 		cacheManager.setCaches(Arrays.asList(
 				new ConcurrentMapCache("scenceCache"),
 				new ConcurrentMapCache("userCache")));
 
 		return cacheManager;
 	}
-//	@Bean
-//	public EhCacheManagerFactoryBean ehCacheManagerFactoryBean() {
-//		EhCacheManagerFactoryBean ehCacheManagerFactoryBean = new EhCacheManagerFactoryBean();
-//		ehCacheManagerFactoryBean.setConfigLocation(new ClassPathResource(
-//				"config/ehcache.xml"));
-//		return ehCacheManagerFactoryBean;
-//	}
-//
-//	@Bean
-//	public CacheManager cacheManager() {
-//		EhCacheCacheManager cacheManager = new EhCacheCacheManager();
-//		cacheManager.setCacheManager(ehCacheManagerFactoryBean().getObject());
-//		return cacheManager;
-//	}
+	*/
+	/*增强ehCache*/
+	
+	@Bean
+	public EhCacheManagerFactoryBean ehCacheManagerFactoryBean() {
+		EhCacheManagerFactoryBean ehCacheManagerFactoryBean = new EhCacheManagerFactoryBean();
+		ehCacheManagerFactoryBean.setConfigLocation(new ClassPathResource(
+				"ehcache.xml"));
+		return ehCacheManagerFactoryBean;
+	}
+
+	@Bean
+	public CacheManager cacheManager() {
+		EhCacheCacheManager cacheManager = new EhCacheCacheManager();
+		cacheManager.setCacheManager(ehCacheManagerFactoryBean().getObject());
+		return cacheManager;
+	}
 	@Bean
 	@Override
 	public KeyGenerator keyGenerator() {

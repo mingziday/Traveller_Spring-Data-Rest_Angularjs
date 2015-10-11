@@ -8,6 +8,8 @@ import org.springframework.core.annotation.Order;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import net.sf.ehcache.constructs.web.filter.SimplePageCachingFilter;
+
 /*
  * 所有实现了WebApplicationInitializer接口的类都会在容器启动时自动被加载运行，用@Order注解设定加载顺序
  * 这是servlet3.0+后加入的特性，
@@ -46,10 +48,12 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 
 	@Override
 	protected Filter[] getServletFilters() {
+		/*字符编码过滤器*/
 		CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
 		characterEncodingFilter.setEncoding(StandardCharsets.UTF_8.name());
 		characterEncodingFilter.setForceEncoding(true);
-		return new Filter[] { characterEncodingFilter };
+		
+		return new Filter[] { characterEncodingFilter};
 	}
 
 	@Override
