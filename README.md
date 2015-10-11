@@ -30,7 +30,7 @@ webjar： 一种将前端资源文件进行打包整体发布的方法
 8、版本发布工具git   
 9、测试框架SpringTest+JUnit    
 10、缓存   
-spring cache/spring ehcache
+spring cache/spring ehcache   
 11、其他    
 Memcached、hibernate+coherence     
 反向代理nginx+静态缓存varnish+静态化工具Node.js  
@@ -61,4 +61,5 @@ scences主页显示、主页分页、详细页显示------2015/9/22
 注册登录界面-----2015/9/27  
 完成用户注册-----2012/9/30   
 简单cache实现----2015/10/5
-web.xml配置采用config类的方法代替----2015/10/6
+web.xml配置采用config类的方法代替----2015/10/6  
+ehcache-----2015/10/11  
