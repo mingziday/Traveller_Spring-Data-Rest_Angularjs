@@ -4,7 +4,7 @@
 angular.module('travellerApp.services',['restangular'])
 
 .config(function(RestangularProvider){
-	 RestangularProvider.setBaseUrl('./');
+	 RestangularProvider.setBaseUrl('./traveller');
 	 RestangularProvider.addResponseInterceptor(function(data, operation, route) {
         var returnData;
         if (route.indexOf("/") > 0)
@@ -41,7 +41,7 @@ angular.module('travellerApp.services',['restangular'])
     });
   })
 .service('travellerService',function(Restangular){
-	var baseurl = "";
+	var baseurl = "./traveller";
 	this.setBaseUrl = function(url){
 		baseurl = url;
 	};

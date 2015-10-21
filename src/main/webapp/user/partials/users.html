@@ -12,7 +12,7 @@
     <tbody>
         <tr ng-repeat="user in users">
             <td>{{user.id}}</td>
-            <td><a ng-href="user.jsp?#/users/{{user.id}}/view">{{user.name}}</a></td>
+            <td><a ng-href="user.html#/users/{{user.id}}/view">{{user.name}}</a></td>
             <td><img class="hover-effect" alt="" ng-src="common/userimg/{{user.picture}}" /></td>
             <td>{{user.email}}</td>
         </tr>

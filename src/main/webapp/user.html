@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html data-ng-app="userApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>traveller :: a Spring Framework demonstration</title>
+<script src="webjars/jquery/2.1.1/jquery.min.js"></script>
+<!-- jquery-ui.js file is really big so we only load what we need instead of loading everything -->
+<script src="webjars/jquery-ui/1.10.3/ui/jquery.ui.core.js"></script>
+
+<link href="webjars/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="common/js/validator.min.js"></script>
+<script src="webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--  
+<spring:url value="/webjars/jquery-ui/1.10.3/ui/jquery.ui.datepicker.js" var="jQueryUiDatePicker"/>
+<script src="${jQueryUiDatePicker}"></script>
+-->   
+<!-- jquery-ui.css file is not that big so we can afford to load it -->
+<link href="webjars/jquery-ui/1.10.3/themes/base/jquery-ui.css" rel="stylesheet"></link>
+<link href="common/css/icomoon-social.css" rel="stylesheet"/>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800" rel="stylesheet" type="text/css" /> 
+<link href="common/css/leaflet.css" rel="stylesheet"/>
+<link href="common/css/main-special.css" rel="stylesheet"/>
+<!-- 箭头 -->
+<link href="common/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="common/css/line-icons.css" rel="stylesheet"/>
+<!--滚动图
+<spring:url value="/common/css/owl.carousel.css" var="owlcarouselCss"/>
+<link href="${owlcarouselCss}" rel="stylesheet"/>
+-->
+</head>
+<body> 
+<div class="container"> 
+    <div ng-include="'fragments/nav.html'"></div> 
+</div>
+
+<div ui-view></div>
+
+<div class="container-fluid">
+<div ng-include="'fragments/footer.html'"></div>
+</div>
+
+<script type="text/javascript" src="webjars/angularjs/1.3.8/angular.js"></script>
+<script type="text/javascript" src="common/js/lodash.min.js"></script>
+<script type="text/javascript" src="common/myjs/services.js"></script>
+<script type="text/javascript" src="user/js/app.js"></script>
+<script type="text/javascript" src="user/js/controllers.js"></script>
+<script type="text/javascript" src="user/js/app.js"></script>
+<script type="text/javascript" src="webjars/angularjs/1.3.8/angular-resource.min.js"></script>
+<script type="text/javascript" src="webjars/restangular/1.4.0/restangular.min.js"></script>
+<script type="text/javascript" src="webjars/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="webjars/angular-sanitize/1.3.11/angular-sanitize.min.js"></script> 
+
+
+</body>
+</html>

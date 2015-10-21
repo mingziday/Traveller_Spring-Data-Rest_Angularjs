@@ -1,10 +1,36 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html data-ng-app="scenceApp">
-<jsp:include page="fragments/header.jsp" />
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>traveller :: a Spring Framework demonstration</title>
+<script src="webjars/jquery/2.1.1/jquery.min.js"></script>
+<!-- jquery-ui.js file is really big so we only load what we need instead of loading everything -->
+<script src="webjars/jquery-ui/1.10.3/ui/jquery.ui.core.js"></script>
+
+<link href="webjars/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="common/js/validator.min.js"></script>
+<script src="webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--  
+<spring:url value="/webjars/jquery-ui/1.10.3/ui/jquery.ui.datepicker.js" var="jQueryUiDatePicker"/>
+<script src="${jQueryUiDatePicker}"></script>
+-->   
+<!-- jquery-ui.css file is not that big so we can afford to load it -->
+<link href="webjars/jquery-ui/1.10.3/themes/base/jquery-ui.css" rel="stylesheet"></link>
+<link href="common/css/icomoon-social.css" rel="stylesheet"/>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800" rel="stylesheet" type="text/css" /> 
+<link href="common/css/leaflet.css" rel="stylesheet"/>
+<link href="common/css/main-special.css" rel="stylesheet"/>
+<!-- 箭头 -->
+<link href="common/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="common/css/line-icons.css" rel="stylesheet"/>
+<!--滚动图
+<spring:url value="/common/css/owl.carousel.css" var="owlcarouselCss"/>
+<link href="${owlcarouselCss}" rel="stylesheet"/>
+-->
+</head>
 <body> 
 <div class="container"> 
-  <jsp:include page="fragments/nav.jsp" />
+    <div ng-include="'fragments/nav.html'"></div> 
 </div>
 
 <div ui-view></div>
