@@ -26,31 +26,6 @@ MVC：Spring MVC
 Angularjs：2009年出生的前端神器   
 6、前端样式框架   
 bootstrap  
-7、工程管理   
-Maven   
-webjar： 一种将前端资源文件进行打包整体发布的方法；采用nginx后，webjar应该作为静态资源被访问才对，但是jar文件无法被nginx解析，于是将webjar包解压缩，部署到单独的static目录   
-8、版本发布工具git   
-9、测试框架  
-SpringTest+JUnit     
-10、缓存   
-<<<<<<< HEAD
-spring cache/spring ehcache  
-spring ehcache页面缓存  
-=======
-spring cache/spring ehcache   
->>>>>>> origin/master
-11、其他    
-Memcached、hibernate+coherence     
-静态缓存：nginx+varnish+静态化工具Node.js  
-
-安装手册
-------------------------
-1、下载工程代码  
-2、安装Eclipse或者STS  
-3、安装Maven  
-4、安装Tomcat
-5、安装Nginx  
-6、Mysql5  
 7、导入数据库，数据脚本sql/traveller.sql  
 8、更改数据库连接字串，com.huawei.traveller.config.AppConfig  
 			ds.setDriverClass("com.mysql.jdbc.Driver");  
@@ -71,13 +46,7 @@ scences主页显示、主页分页、详细页显示------2015/9/22
 首页增加scences的链接----2015/9/24  
 注册登录界面-----2015/9/27  
 完成用户注册-----2012/9/30   
-<<<<<<< HEAD
 简单cache实现----2015/10/5  
 web.xml配置采用config类的方法代替----2015/10/6  
 ehcache---2015/10/11   
 nginx实现动静分离访问----2015/10/20   
-=======
-简单cache实现----2015/10/5
-web.xml配置采用config类的方法代替----2015/10/6  
-ehcache-----2015/10/11  
->>>>>>> origin/master
