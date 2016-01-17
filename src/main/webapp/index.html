@@ -4,29 +4,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <title>traveller :: a Spring Framework demonstration</title>
 <script src="webjars/jquery/2.1.1/jquery.min.js"></script>
-<!-- jquery-ui.js file is really big so we only load what we need instead of loading everything -->
 <script src="webjars/jquery-ui/1.10.3/ui/jquery.ui.core.js"></script>
-
-<link href="webjars/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
 <script src="common/js/validator.min.js"></script>
 <script src="webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<!--  
-<spring:url value="/webjars/jquery-ui/1.10.3/ui/jquery.ui.datepicker.js" var="jQueryUiDatePicker"/>
-<script src="${jQueryUiDatePicker}"></script>
--->   
-<!-- jquery-ui.css file is not that big so we can afford to load it -->
-<link href="webjars/jquery-ui/1.10.3/themes/base/jquery-ui.css" rel="stylesheet"></link>
-<link href="common/css/icomoon-social.css" rel="stylesheet"/>
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800" rel="stylesheet" type="text/css" /> 
-<link href="common/css/leaflet.css" rel="stylesheet"/>
-<link href="common/css/main-special.css" rel="stylesheet"/>
-<!-- 箭头 -->
-<link href="common/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="common/css/line-icons.css" rel="stylesheet"/>
-<!--滚动图
-<spring:url value="/common/css/owl.carousel.css" var="owlcarouselCss"/>
-<link href="${owlcarouselCss}" rel="stylesheet"/>
--->
+<div ng-include="'fragments/css.html'"></div> 
 </head>
  <body> 
   <div class="container"> 
@@ -146,7 +127,7 @@
     <div class="row margin-bottom-50"> 
      <div class="col-md-6 md-margin-bottom-50"> 
       <div class="testimonials-info rounded-bottom"> 
-       <img class="rounded-x" src="http://htmlstream.com/preview/unify-v1.8/assets/img/testimonials/img5.jpg" alt="" /> 
+       <img class="rounded-x" src="common/img/img51.jpg" alt="" /> 
        <div class="testimonials-desc"> 
         <p>我在凤凰古城的三日故事.</p> 
         <strong>Evan Bohringer</strong> 
@@ -157,7 +138,7 @@
      <!--end 1--> 
      <div class="col-md-6"> 
       <div class="testimonials-info rounded-bottom"> 
-       <img class="rounded-x" src="http://htmlstream.com/preview/unify-v1.8/assets/img/testimonials/img6.jpg" alt="" /> 
+       <img class="rounded-x" src="common/img/img61.jpg" alt="" /> 
        <div class="testimonials-desc"> 
         <p>黄山，去多少次都不会后悔的地方.</p> 
         <strong>Sara Lisbon</strong> 
@@ -170,7 +151,7 @@
     <div class="row margin-bottom-20"> 
      <div class="col-md-6 md-margin-bottom-50"> 
       <div class="testimonials-info rounded-bottom"> 
-       <img class="rounded-x" src="http://htmlstream.com/preview/unify-v1.8/assets/img/testimonials/img3.jpg" alt="" /> 
+       <img class="rounded-x" src="common/img/img71.jpg" alt="" /> 
        <div class="testimonials-desc"> 
         <p>在大理，寻找那些曾经拥有的梦.</p> 
         <strong>Alice Williams</strong> 
@@ -180,7 +161,7 @@
      </div> 
      <div class="col-md-6"> 
       <div class="testimonials-info rounded-bottom"> 
-       <img class="rounded-x" src="http://htmlstream.com/preview/unify-v1.8/assets/img/testimonials/img2.jpg" alt="" /> 
+       <img class="rounded-x" src="common/img/img81.jpg" alt="" /> 
        <div class="testimonials-desc"> 
         <p>去青岛租一椽破屋，面朝大海，春暖花开.</p> 
         <strong>Jane Wearne</strong> 
@@ -211,7 +192,7 @@
      <div class="funny-boxes funny-boxes-top-purple bg-color-white"> 
       <div class="row"> 
        <div class="col-md-4 funny-boxes-img"> 
-        <img class="img-responsive" src="http://htmlstream.com/preview/unify-v1.8/assets/img/main/img6.jpg" alt="" /> 
+        <img class="img-responsive" src="common/img/img6.jpg" alt="" /> 
         <ul class="list-unstyled"> 
          <li><i class="fa-fw fa fa-briefcase"></i> Dell, Google</li> 
          <li><i class="fa-fw fa fa-map-marker"></i> New York, US</li> 
@@ -237,7 +218,7 @@
      <div class="funny-boxes funny-boxes-top-yellow bg-color-white"> 
       <div class="row"> 
        <div class="col-md-4 funny-boxes-img"> 
-        <img class="img-responsive" src="http://htmlstream.com/preview/unify-v1.8/assets/img/main/img20.jpg" alt="" /> 
+        <img class="img-responsive" src="common/img/img20.jpg" alt="" /> 
         <ul class="list-unstyled"> 
          <li><i class="fa-fw fa fa-briefcase"></i> Dell, Google</li> 
          <li><i class="fa-fw fa fa-map-marker"></i> New York, US</li> 
@@ -265,7 +246,7 @@
      <div class="funny-boxes funny-boxes-top-purple bg-color-white"> 
       <div class="row"> 
        <div class="col-md-4 funny-boxes-img"> 
-        <img class="img-responsive" src="http://htmlstream.com/preview/unify-v1.8/assets/img/main/img6.jpg" alt="" /> 
+        <img class="img-responsive" src="common/img/img6.jpg" alt="" /> 
         <ul class="list-unstyled"> 
          <li><i class="fa-fw fa fa-briefcase"></i> Dell, Google</li> 
          <li><i class="fa-fw fa fa-map-marker"></i> New York, US</li> 
@@ -291,7 +272,7 @@
      <div class="funny-boxes funny-boxes-top-yellow bg-color-white"> 
       <div class="row"> 
        <div class="col-md-4 funny-boxes-img"> 
-        <img class="img-responsive" src="http://htmlstream.com/preview/unify-v1.8/assets/img/main/img20.jpg" alt="" /> 
+        <img class="img-responsive" src="common/img/img20.jpg" alt="" /> 
         <ul class="list-unstyled"> 
          <li><i class="fa-fw fa fa-briefcase"></i> Dell, Google</li> 
          <li><i class="fa-fw fa fa-map-marker"></i> New York, US</li> 
@@ -343,4 +324,3 @@
  
  </body>
 </html>
-
