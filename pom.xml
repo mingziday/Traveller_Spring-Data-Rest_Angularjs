@@ -27,14 +27,16 @@
 		<c3p0.version>0.9.5.1</c3p0.version>
 		<jackson.version>2.4.4</jackson.version>
 		<!-- Web dependencies -->
+		<!-- 
 		<webjars-bootstrap.version>3.3.5</webjars-bootstrap.version>
 		<webjars-jquery-ui.version>1.10.3</webjars-jquery-ui.version>
 		<webjars-jquery.version>2.1.1</webjars-jquery.version>
-		<!-- <webjars-angularjs-rest.version>2.4.0.RELEASE</webjars-angularjs-rest.version> -->
-		<!-- <dandelion.version>1.1.0</dandelion.version> 放弃 -->
+		<webjars-angularjs-rest.version>2.4.0.RELEASE</webjars-angularjs-rest.version> 
 		<webjars-angularjs.version>1.3.8</webjars-angularjs.version>
 		<webjar-angularjs-ui-router.version>0.2.15</webjar-angularjs-ui-router.version>
 		<webjar-restangular.version>1.4.0-2</webjar-restangular.version>
+		-->
+		<webflow-version>2.4.2.RELEASE</webflow-version>
 	</properties>
 	<dependencies>
 
@@ -162,7 +164,7 @@
 	   <groupId>net.sf.ehcache</groupId>
 	   <artifactId>ehcache-web</artifactId>
 	   <version>2.0.4</version>
-      	   </dependency>
+       </dependency>
 	   
 		<!-- 扩展Java类与实现Java接口 -->
 		<dependency>
@@ -272,6 +274,13 @@
 			<artifactId>commons-beanutils</artifactId>
 			<version>${commons-beanutils.version}</version>
 		</dependency>
+		<!--HSQL-->
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>2.2.9</version>
+			<scope>runtime</scope>
+		</dependency>
 		<!-- <dependency> <groupId>commons-collections</groupId> <artifactId>commons-collections</artifactId> 
 			<version>3.2.1</version> </dependency> -->
 		<!-- 测试 -->
@@ -289,6 +298,7 @@
 		</dependency>
 
 		<!-- Webjars (static dependencies distributed as JAR files) -->
+		<!--
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>bootstrap</artifactId>
@@ -335,6 +345,7 @@
 			<artifactId>angular-sanitize</artifactId>
 			<version>1.3.11</version>
 		</dependency>
+	-->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
@@ -354,6 +365,28 @@
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>1.9.13</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.webflow</groupId>
+			<artifactId>spring-webflow</artifactId>
+			<version>${webflow-version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.webflow</groupId>
+			<artifactId>spring-js</artifactId>
+			<version>${webflow-version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<!-- text angularjs html editor 放弃 <dependency> <groupId>org.webjars</groupId> 
 			<artifactId>textAngular</artifactId> <version>1.4.1</version> </dependency> -->
