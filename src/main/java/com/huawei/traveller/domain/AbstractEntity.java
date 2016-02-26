@@ -11,7 +11,9 @@ import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
 public abstract class AbstractEntity implements Identifiable<Integer>,Serializable {
-    @Id
+
+	private static final long serialVersionUID = 1L;
+	@Id
     @GenericGenerator(name = "generator", strategy = "increment")
     @GeneratedValue(generator = "generator")
     public Integer id;

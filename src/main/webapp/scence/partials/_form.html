@@ -1,29 +1,38 @@
-<div class="form-group">
-    <label for="name" class="col-sm-2 control-label">Name</label>
-    <div class="col-sm-10">
-        <input type="text" ng-model="scence.name" class="form-control" id="name" placeholder="scence Name Here"/>
-    </div>
-</div>
-<div class="form-group">
-    <label for="address" class="col-sm-2 control-label">Address</label>
-    <div class="col-sm-10">
-        <input type="text" ng-model="scence.address" class="form-control" id="name" placeholder="scence Address Here"/>
-    </div>
-</div>
-<div class="form-group">
-    <label for="country" class="col-sm-2 control-label">Country</label>
-    <div class="col-sm-10">
-        <input type="text" ng-model="scence.country" class="form-control" id="country" placeholder="Whiche country the scence beylone?"/>
-    </div>
-</div>
-<div class="form-group">
-    <div class="col-sm-12">
-        <div class="ueditor" ng-model="scence.info">Description</div>
-    </div>
-</div>
+<header>增加新景点</header>
+<fieldset>               
+    <section class="row">
+      <label class="label col col-2">景点名称</label>
+        <label class="input col col-4">
+            <input type="text" ng-model="scence.name" name="name" placeholder="ScenceName" required >
+        </label>
 
-<div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-        <input type="submit" class="btn btn-primary" value="Save"/>
+         <label class="label col col-2">星级</label>
+         <label class="input col col-4">
+            <input type="text" ng-model="scence.hearts" name="hearts" placeholder="ScenceHearts" required >
+        </label>                                 
+    </section>
+
+    <section class="row">
+      <label class="label col col-2">景点地址</label>
+        <label class="input label col col-4">
+            <input type="text" ng-model="scence.address" name="address" placeholder="ScenceAddress" required >
+        </label>
+         <label class="label label col col-2">国家</label>
+         <label class="input label col col-4">
+            <select name="country" ng-model="scence.country" ng-options=" country.id as country.name for country in countries">
+            </select>
+        </label>                                 
+    </section>
+</fieldset>
+<fieldset>
+  <section class="row">
+    <div class="col col-12">
+    <div class="ueditor" ng-model="scence.info"></div>
     </div>
-</div>
+  </section>
+</fieldset>
+<footer>
+    <button type="submit" class="btn-u">Submit</button>
+</footer>
+
+

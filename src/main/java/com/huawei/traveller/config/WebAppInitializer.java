@@ -1,6 +1,7 @@
 package com.huawei.traveller.config;
 
 import java.nio.charset.StandardCharsets;
+import java.util.EnumSet;
 
 import javax.servlet.*;
 
@@ -30,7 +31,11 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 	 */
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class<?>[] { AppConfig.class, CacheConfig.class };
+		return new Class<?>[] {
+	    DataAccessConfig.class,
+		AppConfig.class, 
+		CacheConfig.class,
+		};
 	}
 
 	/*
@@ -38,7 +43,10 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 	 */
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class<?>[] { WebConfig.class };
+		return new Class<?>[] { 
+			WebMvcConfig.class,
+			WebFlowConfig.class 
+			};
 	}
 
 	/*
@@ -53,6 +61,14 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 		characterEncodingFilter.setEncoding(StandardCharsets.UTF_8.name());
 		characterEncodingFilter.setForceEncoding(true);
 		
+		/*Ehcache页面缓存过滤器*/
+		/*
+		logger.debug("webPageCacheFilter start...");
+		FilterRegistration.Dynamic cacheFilterilterRegistration = servletContext.addFilter(
+				"webPageCacheFilter", net.sf.ehcache.constructs.web.filter.SimplePageCachingFilter.class);
+		cacheFilterilterRegistration.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), false, "/test.*");
+		logger.debug("webPageCacheFilter end...");
+		*/
 		return new Filter[] { characterEncodingFilter};
 	}
 

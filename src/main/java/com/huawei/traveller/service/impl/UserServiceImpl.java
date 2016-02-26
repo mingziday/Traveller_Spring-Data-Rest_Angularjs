@@ -1,13 +1,7 @@
 package com.huawei.traveller.service.impl;
 
-import java.io.Serializable;
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.huawei.traveller.common.Page;
-import com.huawei.traveller.domain.User;
 import com.huawei.traveller.service.UserService;
 
 @Service("userServiceBean")

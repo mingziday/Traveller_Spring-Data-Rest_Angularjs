@@ -73,7 +73,7 @@ angular.module('userApp.controllers',['travellerApp.services','ngSanitize'])
     };//结束function
 
 })//结束controller
-.controller('userRegSuccessController',function($scope,travellerService,$state){
+.controller('userRegSuccessController',function($scope,$state){
 });
 /*
  angular.forEach($scope.users, function (item){

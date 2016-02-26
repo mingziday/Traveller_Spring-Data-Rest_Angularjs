@@ -10,7 +10,7 @@ import java.util.Date;
  * 
  */
 @Entity
-@Table(name="v_comments")
+@Table(name="Comments")
 @NamedQuery(name="Comment.findAll", query="SELECT c FROM Comment c")
 public class Comment implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -21,7 +21,7 @@ public class Comment implements Serializable {
 	private int author;
 
 	@Lob
-	@Column(name = "content", columnDefinition = "TEXT")
+//	@Column(name = "content", columnDefinition = "TEXT")
 	private String content;
 
 	@Temporal(TemporalType.TIMESTAMP)

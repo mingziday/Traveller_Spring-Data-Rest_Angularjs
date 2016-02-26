@@ -10,7 +10,7 @@ import java.util.Date;
  * 
  */
 @Entity
-@Table(name="v_images")
+@Table(name="Image")
 @NamedQuery(name="Image.findAll", query="SELECT i FROM Image i")
 public class Image implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -19,7 +19,7 @@ public class Image implements Serializable {
 	private int id;
 
 	@Lob
-	@Column(name = "info", columnDefinition = "TEXT")
+	/*@Column(name = "info", columnDefinition = "TEXT")*/
 	private String info;
 
 	private String name;

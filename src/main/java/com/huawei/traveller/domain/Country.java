@@ -1,6 +1,5 @@
 package com.huawei.traveller.domain;
 
-import java.io.Serializable;
 import javax.persistence.*;
 import java.sql.Timestamp;
 
@@ -10,13 +9,10 @@ import java.sql.Timestamp;
  * 
  */
 @Entity
-@Table(name="v_country")
+@Table(name="Country")
 @NamedQuery(name="Country.findAll", query="SELECT c FROM Country c")
-public class Country implements Serializable {
+public class Country extends AbstractEntity {
 	private static final long serialVersionUID = 1L;
-
-	@Id
-	private Short id;
 
 	private String flag;
 
@@ -27,13 +23,6 @@ public class Country implements Serializable {
 	public Country() {
 	}
 
-	public Short getId() {
-		return this.id;
-	}
-
-	public void setId(Short id) {
-		this.id = id;
-	}
 
 	public String getFlag() {
 		return this.flag;

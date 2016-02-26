@@ -10,24 +10,18 @@ import java.util.Set;
  * 
  */
 @Entity
-@Table(name="v_scences")
+@Table(name="Scences"/*, catalog = "travellerdb"*/)
 @NamedQuery(name="Scence.findAll", query="SELECT v FROM Scence v")
 public class Scence extends AbstractEntity {
 	private static final long serialVersionUID = 1L;
 
-	/*
-	@Id
-	@GenericGenerator(name = "generator", strategy = "increment")
-	@GeneratedValue(generator = "generator")
-	private int id;
-	*/
 	private String address;
 
 	private short country;
 
 	private int hearts;
 
-	@Column(name = "info", columnDefinition = "TEXT")
+//	@Column(name = "info", columnDefinition = "TEXT")
 	private String info;
 
 	private String name;
@@ -42,15 +36,7 @@ public class Scence extends AbstractEntity {
 
 	public Scence() {
 	}
-	/*
-	public int getId() {
-		return this.id;
-	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-	*/
 	public String getAddress() {
 		return this.address;
 	}

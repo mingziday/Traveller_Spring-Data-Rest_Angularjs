@@ -25,9 +25,9 @@ public interface ScenceRepository extends JpaRepository<Scence, Integer> {
 	@Cacheable(value = "scenceCache")
 	Page<Scence> findAll(Pageable pageable);
 	//保存
-	@SuppressWarnings("unchecked")
-	@CacheEvict(value = "scenceCache", key="#entity.id")
-	Scence save(Scence entity);
+	//@SuppressWarnings("unchecked")
+	//@CacheEvict(value = "scenceCache", key="#entity.id")
+	//Scence save(Scence entity);
 	//删除
 	@CacheEvict(value = "scenceCache", key="#id")
 	void delete(Integer id);

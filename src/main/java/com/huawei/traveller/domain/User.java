@@ -9,9 +9,11 @@ import java.util.Date;
  * 
  */
 @Entity
-@Table(name = "v_users" , catalog = "happycardata")
+@Table(name = "Users" /*, catalog = "travellerdb"*/)
 @NamedQuery(name="User.findAll", query="SELECT v FROM User v")
 public class User extends AbstractEntity {
+	private static final long serialVersionUID = 1L;
+
 	@Temporal(TemporalType.DATE)
 	private Date birthdate;
 
@@ -24,7 +26,7 @@ public class User extends AbstractEntity {
 	private boolean enabled;
 
 	@Lob
-	@Column(name = "info", columnDefinition = "TEXT")
+//	@Column(name = "info", columnDefinition = "TEXT")
 	private String info;
 
 	private String name;
@@ -35,7 +37,7 @@ public class User extends AbstractEntity {
 
 	private String picture;
 	/*长度=2表示两位2进制数，如果为1只能是bit*/
-	@Column(name = "gender", columnDefinition = "BYTE", length = 2)
+//	@Column(name = "gender", columnDefinition = "BYTE", length = 2)
 	private byte gender;
 
 	@Temporal(TemporalType.TIMESTAMP)
